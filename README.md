@@ -204,3 +204,14 @@ parseInt() 函数可解析一个字符串，并返回一个整数。
 
 
 ```
+
+css 實現禁止選取頁面上的內容
+
+```
+
+.class {
+ -webkit-user-select: none;   /* for Chrome */
+}
+
+```
+
