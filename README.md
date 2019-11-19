@@ -215,3 +215,24 @@ css 實現禁止選取頁面上的內容
 
 ```
 
+js 修改和獲取p標籤裡面的內容
+
+```
+
+  function textModify()
+    {
+        var obj = document.getElementById("p");
+        alert(obj.innerHTML);
+        obj.innerHTML= "google coding"; 
+    }
+  function textModify2()
+    {
+        var obj = document.getElementById("p2");
+        alert(obj.innerText);
+        obj.innerText= "knowledge"; 
+    }
+    
+ JavaScript 的 innerHTML 與 innerText 看似類似，但其實有很大的差異，對大多數設計師來說 innerHTML 應該比較熟悉，他是用來取得 HTML 元素或寫入字串到 HTML 網頁的語法，且 innerHTML 是 W3C 規定的標準寫法，而 innerText 則是除了可以用來取得 HTML 元素之外，還會把元素的 HTML 標籤去除掉，但 innerText 並非 W3C 所規定的標準寫法，而且僅適用於 IE 瀏覽器，這點非常重要。
+ 
+ ```
+ 
