@@ -71,16 +71,17 @@ onchange 事件
 
 ```
 
-onChange 事件可以用在像是 input text、textarea(多行的文字輸入欄位)、select option 等 HTML Form 元素上，當元素內容改變時就觸發 onChange Event來執行你所準備好的 JavaScript 程式碼
+  onChange 事件可以用在像是 input text、textarea(多行的文字輸入欄位)、
+  select option 等 HTML Form 元素上，當元素內容改變時就觸發 onChange Event來執行你所準備好的 JavaScript 程式碼
 
   function ShowStr(x){
      var Str=document.getElementById(x).value;
      alert(Str);
   }
 
-請隨意輸入幾個文字：<input type="text" id="Str" onchange="ShowStr(this.id)">
+  請隨意輸入幾個文字：<input type="text" id="Str" onchange="ShowStr(this.id)">
 
-當輸入完文字滑鼠移開文字欄位就會觸發onchange Event
+  當輸入完文字滑鼠移開文字欄位就會觸發onchange Event
 
 ```
 
@@ -103,7 +104,7 @@ if ， else if ， else 條件判斷式
      document.write("這是C");
   }
 
-輸出為 這是B。
+  輸出為 這是B。
 
 ```
 
@@ -111,11 +112,11 @@ if ， else if ， else 條件判斷式
 
 ```
 
-利用for迴圈使變數產生數字
+  利用for迴圈使變數產生數字
 
-輸出後會產生1~9
+  輸出後會產生1~9
 
-再使兩個變數相乘
+  再使兩個變數相乘
 
   for(i = 1 ; i < 10 ; i++)
   {
@@ -200,7 +201,7 @@ parseInt() 函数
 
 ```
 
-parseInt() 函数可解析一个字符串，并返回一个整数。
+  parseInt() 函数可解析一个字符串，并返回一个整数。
 
 
 ```
@@ -209,9 +210,9 @@ css 實現禁止選取頁面上的內容
 
 ```
 
-.class {
- -webkit-user-select: none;   /* for Chrome */
-}
+  .class {
+   -webkit-user-select: none;   /* for Chrome */
+  }
 
 ```
 
@@ -232,7 +233,30 @@ js 修改和獲取p標籤裡面的內容
         obj.innerText= "knowledge"; 
     }
     
- JavaScript 的 innerHTML 與 innerText 看似類似，但其實有很大的差異，對大多數設計師來說 innerHTML 應該比較熟悉，他是用來取得 HTML 元素或寫入字串到 HTML 網頁的語法，且 innerHTML 是 W3C 規定的標準寫法，而 innerText 則是除了可以用來取得 HTML 元素之外，還會把元素的 HTML 標籤去除掉，但 innerText 並非 W3C 所規定的標準寫法，而且僅適用於 IE 瀏覽器，這點非常重要。
+  JavaScript 的 innerHTML 與 innerText 看似類似，但其實有很大的差異，對大多數設計師來說 innerHTML 應該比較熟悉，
+  他是用來取得 HTML 元素或寫入字串到 HTML 網頁的語法，且 innerHTML 是 W3C 規定的標準寫法，
+  而 innerText 則是除了可以用來取得 HTML 元素之外，還會把元素的 HTML 標籤去除掉，但 innerText 並非 W3C 所規定的標準寫法，
+  而且僅適用於 IE 瀏覽器，這點非常重要。
+
+ ```
+ 
+ input min屬性
  
  ```
  
+  輸入 1980-01-01 之前的日期:
+  <input type="date" name="bday" max="1979-12-31"><br>
+
+  輸入 2000-01-01 之後的日期:
+  <input type="date" name="bday" min="2000-01-02"><br>
+
+  數量 (在1和5之間):
+  <input type="number" name="quantity" min="1" max="5"><br>
+
+  min 屬性規定 <input> 元素的最小值。
+
+  提示：min 屬性與 max 屬性配合使用，可創建合法值範圍。
+
+  注意：max 和 min 屬性適用於以下 input 類型：number、range、date、datetime、datetime-local、month、time 和 week。
+  
+  ```
