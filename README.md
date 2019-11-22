@@ -240,11 +240,12 @@ js 修改和獲取p標籤裡面的內容
   但 innerText 並非 W3C 所規定的標準寫法，
   而且僅適用於 IE 瀏覽器，這點非常重要。
 
- ```
+```
  
- input min屬性
+input min屬性
+
  
- ```
+```
  
   輸入 1980-01-01 之前的日期:
   <input type="date" name="bday" max="1979-12-31"><br>
@@ -261,4 +262,16 @@ js 修改和獲取p標籤裡面的內容
 
   注意：max 和 min 屬性適用於以下 input 類型：number、range、date、datetime、datetime-local、month、time 和 week。
   
-  ```
+```
+
+Js isNAN()
+
+```
+
+  isNAN()函數用於檢查其參數是否 是非數字值
+  isNaN(x)
+  
+  如果x是特殊的非數字值NAN(或者能被轉換為這樣的值),返回的值就是true。如果x是其他值,則返回false。
+  
+```
+
