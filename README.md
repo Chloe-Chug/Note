@@ -275,3 +275,75 @@ Js isNAN()
   
 ```
 
+Js 實現點擊跳轉到指定位置
+
+```
+
+  1. 通過html錨點實現滾動定位到頁面指定位置(DIV)
+  
+  <a href="#abc">點擊跳轉</a>
+  <div id="abc">將要跳轉到這裡</div>
+  
+  2.通過點擊button按鈕使用js實現滾動跳轉到頁面指定位置(DIV)
+  
+  <script>
+  
+  function onTopClick()
+  {
+  window.location.hash = "#abc";
+  }
+  
+  </script>
+  
+  <input type="button" name="Submit" value="提交" onclick="onTopClick()">
+  
+  3.用animate屬性，當點擊錨點後，頁面滾動到相應的DIV。接著上面的代碼，具體添加如下代碼：
+  
+  html頁面：
+
+  <div id="container">
+       <p id="p1">div1</p>
+        <p id="p2">div2</p>
+        <p id="p3">div3</p>
+  </div>
+
+    <div id="div1">div1</div>
+    <div id="div2">div2</div>
+    <div id="div3">div3</div>
+
+  css樣式：
+
+  div {
+        height: 800px;
+        width: 400px;
+        border: 2px solid black;
+      }
+  #container{
+        position: fixed;
+       margin:50px 500px;
+  }
+
+  js代碼如下：
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+  $(document).ready(function() {
+    $("#p1").click(function() {
+      $("html, body").animate({
+        scrollTop: $("#div1").offset().top }, {duration: 500,easing: "swing"});
+      return false;
+    });
+
+    $("#p2").click(function() {
+      $("html, body").animate({
+        scrollTop: $("#div2").offset().top }, {duration: 500,easing: "swing"});
+      return false;
+    });
+
+    $("#p3").click(function() {
+      $("html, body").animate({
+        scrollTop: $("#div3").offset().top }, {duration: 500,easing: "swing"});
+      return false;
+    });
+  });
+
+```
