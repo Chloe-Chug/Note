@@ -347,3 +347,23 @@ Js 實現點擊跳轉到指定位置
   });
 
 ```
+
+Js substr() 字符串中抽取從 start 下標開始的指定數目的字符。
+
+```
+
+  stringObject.substr(start,length);
+  
+  例：時間補0
+  var h = ('0'+d.getHours()).substr(-2);   
+  
+```
+
+Js 每隔一秒就執行
+
+```
+
+  setTimeout("test()",1000);
+  
+```
+
