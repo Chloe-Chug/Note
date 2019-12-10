@@ -367,3 +367,20 @@ Js 每隔一秒就執行
   
 ```
 
+Js 基本類 使用onClick 及 this取得id
+
+```
+
+  <script>
+    function myMsg(myObj)
+    {
+    alert("id 為: " + myObj.id);
+    }
+  </script>
+  
+  <input type="button" id="myButton" name="mybutton" value="送出" onclick="myMsg(this)">
+
+  結果顯示為：　id為myButton
+  
+```  
+
