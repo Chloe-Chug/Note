@@ -384,3 +384,22 @@ Js 基本類 使用onClick 及 this取得id
   
 ```  
 
+Js 獲取ID改變背景顏色
+
+```
+
+   function change_line(line) {
+
+    console.log(line);
+
+    var obj1 = document.getElementById("hour-h");
+    var obj2 = document.getElementById("min-h");
+    var obj3 = document.getElementById("second-h");
+
+    if (line == 'line1') {
+      obj1.style.backgroundColor = "#4158D0";
+      obj2.style.backgroundColor = "#C850C0";
+      obj3.style.backgroundColor = "#FFCC70";
+    }
+
+```
