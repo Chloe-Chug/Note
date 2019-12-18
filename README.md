@@ -403,3 +403,17 @@ Js 獲取ID改變背景顏色
     }
 
 ```
+
+自定義 滑鼠樣式
+
+```
+
+  #mouse
+  {
+      border:1px solid black;
+      cursor:url(wii.ani);
+  }
+  
+  放在所需範圍之div裡，例如：整體網頁均要顯示此樣式就放在最大的div裡。
+  
+  
