@@ -299,30 +299,42 @@ Js 實現點擊跳轉到指定位置
   
   3.用animate屬性，當點擊錨點後，頁面滾動到相應的DIV。接著上面的代碼，具體添加如下代碼：
   
-  html頁面：
-
-  <div id="container">
-       <p id="p1">div1</p>
-        <p id="p2">div2</p>
-        <p id="p3">div3</p>
-  </div>
-
-    <div id="div1">div1</div>
-    <div id="div2">div2</div>
-    <div id="div3">div3</div>
-
-  css樣式：
+ css樣式：
 
   div {
         height: 800px;
         width: 400px;
         border: 2px solid black;
       }
-  #container{
+  #container {
         position: fixed;
-       margin:50px 500px;
-  }
+        margin:50px 500px;
+      }
+  .anchor {
+       display: block;
+       height: 91px;
+       margin-top: -91px;
+       visibility: hidden;
+      }
 
+ html頁面：
+  
+  <div id="container">
+       <p id="p1">div1</p>
+        <p id="p2">div2</p>
+        <p id="p3">div3</p>
+  </div>
+
+    <div id="div1" class="anchor"></div>
+    <div>div1</div>
+    
+    <div id="div2" class="anchor"></div>
+    <div>div2</div>
+    
+    <div id="div3" class="anchor"></div>
+    <div>div3</div>
+
+ 
   js代碼如下：
 
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
