@@ -429,3 +429,43 @@ Js 獲取ID改變背景顏色
   放在所需範圍之div裡，例如：整體網頁均要顯示此樣式就放在最大的div裡。
   
   
+  ```
+  
+  setInterval()   可按照指定的周期（以毫秒計）來調用函數或計算表達式。
+  
+  ```
+  
+  setInterval(function(){ alert("Hello"); }, 3000);
+  每三秒（3000 毫秒）彈出 "Hello" :
+  
+  
+  ```
+  
+  clearInterval()    可取消由 setInterval() 函數設定的定時執行操作。
+  
+  ```
+
+    $(function() {
+        function initial(num, initial, time, sec_time) {
+            var time = time;
+            var oldnum = 3600 * time / 99;
+            var o = $('.num')
+            var start_Date = new Date(initial);
+            var sec = (new Date().getTime() - start_Date.getTime()) / oldnum;
+            var nowNum = parseInt(sec + num);
+
+            let a = setInterval(function() {
+                ++nowNum;
+                o.html(nowNum)
+                clearInterval(a);
+                setInterval(function() {
+                    ++nowNum;
+                    o.html(nowNum)
+                }, sec_time)
+            }, time)
+        };
+        initial(500, '2022/1/3 00:00', 1000, 10000);
+        // 初始数值，初始日期，增加数值间隔(ms)
+    })
+    
+    初始為一秒執行一次，取消由 setInterval() 函數設定的定時執行，改為10秒執行一次
